@@ -1,21 +1,34 @@
 package media.calcula;
 
+import java.util.Scanner;
+
 public class CalculaMedia {
-
 	public static void main(String[] args) {
-		calculaMedia();
-	}
+		
+		Scanner sc = new Scanner(System.in);
 
-	private static void calculaMedia() {
 		
-		float nota1 = 5;
-		float nota2 = 9;
-		float nota3 = 7;
-		float nota4 = 6;
+		System.out.println("Informe as 4 notas");
 		
-		float somaNota = nota1 + nota2 + nota3 + nota4;
-		float media = somaNota / 4;
-		System.out.print(media);
+		Float nota1 = sc.nextFloat();
+		
+		Float nota2 = sc.nextFloat();
+		
+		Float nota3 = sc.nextFloat();
+		
+		Float nota4 = sc.nextFloat();
+		
+		Float media = (nota1 + nota2 + nota3 + nota4) / 4;
+		
+		if(media >= 7) {
+			System.out.println("Aprovado!");
+		}
+		else if (media >= 5) {
+			System.out.println("Recuperação!");
+		} else {
+			System.out.println("Reprovado!");
+		}
+		
 	}
 
 }
